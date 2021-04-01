@@ -9,25 +9,25 @@
   </head>
   <body onload="setDate()">
     <div id="banner">
-      <h1>Welcome to the game of Eclipse!</h1>
+      Eclipse
     </div>
-    <h2>Select your preferred board size.</h2>
+    <div id="gameOptions">
+    <h2>Game Options</h2>
     <label for="boardSize">Board Size</label>
     <select id="boardSize">
-      <option value="Small">Small (8x8)</option>
-      <option value="Medium">Medium (10x10)</option>
-      <option value="Large">Large (12x12)</option>
-    </select>
+      <option value="8" >Small (8x8)</option>
+      <option value="10">Medium (10x10)</option>
+      <option value="12">Large (12x12)</option>
+    </select> <br>
+    <input type="radio" id="notation" name="notation" value="1">
+    <label for="notation">Notation on</label><br>
+    <input type="radio" id="notation" name="notation"  value="0">
+    <label for="notation">Notation off</label><br>
+    <img id="drag1" src="img/bB.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto">
+    <br><br>
+    <button onclick="createGameBoard()">Start Game</button>
+    </div> <br>
     <div id="gameBoard">
-      <div class="grid-item">1</div>
-      <div class="grid-item">2</div>
-      <div class="grid-item">3</div>
-      <div class="grid-item">4</div>
-      <div class="grid-item">5</div>
-      <div class="grid-item">6</div>
-      <div class="grid-item">7</div>
-      <div class="grid-item">8</div>
-      <div class="grid-item">9</div>
     </div>
   </body>
   <footer>

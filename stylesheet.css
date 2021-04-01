@@ -1,24 +1,45 @@
 body {
-    background-image: url('img/17520.jpg');
+    background-image: url('img/background_image.jpg');
 }
 #banner {
-    color: rgb(0, 0, 0);
+    color: snow;
+    background-color: rgba(255, 231, 231, 0.603);
+    background-image: url('img/banner_image.jpg');
     text-align: center;
-    background-color: azure;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 64px;
+    border-color: snow;
+    border-style: inset;
+    border-radius: 25px;
+ 
+}
+#gameOptions{
+    color: snow;
+    text-align: center;
+    background-color: #1A1A1D;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 40px;
+    border-color: snow;
+    border-style: inset;
+    border-radius: 25px;
 }
 #gameBoard {
     display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    background-color: #1A1A1D;
     padding: 10px;
+    margin: 20px;
+    border-color: snow;
+    border-style: inset;
+    border-radius: 25px;
 }
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
+.square {
+    background-color: seashell;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    padding: 60px;
     font-size: 30px;
     text-align: center;
+    color: gray;
 }
 footer {
     text-align: center;
