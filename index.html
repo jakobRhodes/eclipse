@@ -9,7 +9,7 @@
   </head>
   <body onload="setDate()">
     <div id="banner">
-      Eclipse
+      Eclipse <br>
     </div>
     <div id="gameOptions">
     <h2>Game Options</h2>
@@ -23,7 +23,8 @@
     <label for="notation">Notation on</label><br>
     <input type="radio" id="notation" name="notation"  value="0">
     <label for="notation">Notation off</label><br>
-    <img id="drag1" src="img/bB.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto">
+    <h2>Captured Pieces</h2>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <br><br>
     <button onclick="createGameBoard()">Start Game</button>
     </div> <br>

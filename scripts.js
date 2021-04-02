@@ -18,12 +18,13 @@ function createGameBoard() {
     var boardSquare = "";
     var number = boardSize;
     var letter = 0;
+    //Array for square id's and notation
     switch(boardSize) {
     case "8":
-        var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
+        var letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
         break;
     case "10":
-        var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
+        var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
         break;
     case "12":
         var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"];
@@ -35,10 +36,22 @@ function createGameBoard() {
         isNotation = document.getElementById('notation').value;
       }
     for (var i = 0; i < numberOfBoardSquares; i++) {
-        if (isNotation)
-            boardSquare += '<div class="square" id="' + letters[letter] + number + '" ondrop="drop(event)" ondragover="allowDrop(event)">' + letters[letter] + number + '</div>';
-        else
-            boardSquare += '<div class="square" id="' + letters[letter] + number + '" ondrop="drop(event)" ondragover="allowDrop(event)"></div>'
+        if (isNotation) {
+            if (number == boardSize - 1 || number ==  2)
+            boardSquare += '<div class="square" id="' + letters[letter] + number + 
+            '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+            + letters[letter] + number + '<img id="' + i +'" src="img/wP.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>';
+            else boardSquare += '<div class="square" id="' + letters[letter] + number + 
+            '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+            + letters[letter] + number + '</div>';
+        }
+        else  {
+            if (number == boardSize - 1 || number ==  2)
+            boardSquare += '<div class="square" id="' + letters[letter] + number + 
+            '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/wP.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>';
+            else boardSquare += '<div class="square" id="' + letters[letter] + number + 
+            '" ondrop="drop(event)" ondragover="allowDrop(event)"></div>'; 
+        }
         if (letter + 1 == boardSize) {
             letter = 0;
             number--;
