@@ -37,21 +37,123 @@ function createGameBoard() {
       }
     for (var i = 0; i < numberOfBoardSquares; i++) {
         if (isNotation) {
-            if (number == boardSize - 1 || number ==  2)
+            //Black Pawns
+            if (number == boardSize - 1) {
             boardSquare += '<div class="square" id="' + letters[letter] + number + 
             '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
-            + letters[letter] + number + '<img id="' + i +'" src="img/wP.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>';
+            + letters[letter] + number + '<img id="' + i +'" src="img/bP.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //White pawns
+            else if (number == 2) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/wP.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black rooks
+            else if (number == boardSize && letter == 0 || number == boardSize  && letter == boardSize - 1 ) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/bR.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //White Rooks
+            else if (number == 1 && letter == 0 || number == 1  && letter == boardSize - 1) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/wR.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black Knight
+            else if (number == boardSize && letter == 1 || number == boardSize  && letter == boardSize - 2 ) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/bN.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //White Knight
+            else if (number == 1 && letter == 1 || number == 1  && letter == boardSize - 2) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/wN.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black Bishop
+            else if (number == boardSize && letter == 2 || number == boardSize  && letter == boardSize - 3 ) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/bB.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }    
+            //White Bishop
+            else if (number == 1 && letter == 2 || number == 1  && letter == boardSize - 3) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/wB.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black Queen
+            else if (number == boardSize && letter == 3) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/bQ.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }    
+            //White Queen
+            else if (number == 1 && letter == 3) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/wQ.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black King
+            else if (number == boardSize && letter == 4) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/bK.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }    
+            //White King
+            else if (number == 1 && letter == 4) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '<img id="' + i +'" src="img/wK.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
             else boardSquare += '<div class="square" id="' + letters[letter] + number + 
-            '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
-            + letters[letter] + number + '</div>';
+                '" ondrop="drop(event)" ondragover="allowDrop(event)">' 
+                + letters[letter] + number + '</div>';
         }
         else  {
-            if (number == boardSize - 1 || number ==  2)
+            //Black Pawns
+            if (number == boardSize - 1) {
             boardSquare += '<div class="square" id="' + letters[letter] + number + 
-            '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/wP.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>';
+            '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/bP.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //White pawns
+            else if (number == 2) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/wP.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black rooks
+            else if (number == boardSize && letter == 0 || number == boardSize  && letter == boardSize - 1 ) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/bR.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //White Rooks
+            else if (number == 1 && letter == 0 || number == 1  && letter == boardSize - 1) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/wR.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black Knight
+            else if (number == boardSize && letter == 1 || number == boardSize  && letter == boardSize - 2 ) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/bN.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //White Knight
+            else if (number == 1 && letter == 1 || number == 1  && letter == boardSize - 2) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/wN.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black Bishop
+            else if (number == boardSize && letter == 2 || number == boardSize  && letter == boardSize - 3 ) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/bB.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }    
+            //White Bishop
+            else if (number == 1 && letter == 2 || number == 1  && letter == boardSize - 3) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/wB.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black Queen
+            else if (number == boardSize && letter == 3) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/bQ.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }    
+            //White Queen
+            else if (number == 1 && letter == 3) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/wQ.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
+            //Black King
+            else if (number == boardSize && letter == 4) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/bK.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }    
+            //White King
+            else if (number == 1 && letter == 4) {
+                boardSquare += '<div class="square" id="' + letters[letter] + number + 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="' + i +'" src="img/wK.png" draggable="true" ondragstart="drag(event)" width="auto" height="auto"></div>'; }
             else boardSquare += '<div class="square" id="' + letters[letter] + number + 
-            '" ondrop="drop(event)" ondragover="allowDrop(event)"></div>'; 
+                '" ondrop="drop(event)" ondragover="allowDrop(event)"></div>';
         }
+        //row calculation
         if (letter + 1 == boardSize) {
             letter = 0;
             number--;
@@ -59,6 +161,8 @@ function createGameBoard() {
         else { 
             letter++;
         }
+        console.log(letter);
+        console.log(letters[letter]);
     }
     document.getElementById("gameBoard").innerHTML = boardSquare;
 }

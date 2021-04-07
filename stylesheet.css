@@ -16,12 +16,24 @@ body {
 #gameOptions{
     color: snow;
     text-align: center;
+    margin: 40px;
+}
+#gameOptionsText{
+    color: snow;
+    text-align: center;
     background-color: #1A1A1D;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 40px;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
     border-color: snow;
-    border-style: inset;
-    border-radius: 25px;
+    border-style: solid;
+    border-radius: 4px;
+}
+#gameOptionsSelect {
+    text-align: left;
+    margin-left: 40%;
+    margin-right: 30%;
 }
 #gameBoard {
     display: grid;
@@ -33,14 +45,23 @@ body {
     border-style: inset;
     border-radius: 25px;
 }
+#captured {
+    background-color: #1A1A1D;
+    border: 2px solid snow;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+    color: cyan; 
+    margin-left: 40px;
+    margin-right: 40px;
+}
 .square {
     background-color: seashell;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 60px;
     font-size: 30px;
     text-align: center;
-    color: gray;
-    
+    color: gray; 
 }
 footer {
     text-align: center;
